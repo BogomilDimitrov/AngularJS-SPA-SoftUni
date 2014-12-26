@@ -1,19 +1,19 @@
 #AngularJS-SPA-SoftUni
 
-## Ads Web Design
-- [ ] HTML5 & CSS3
+## [Ads Web Design](/../../milestones/Web%20Design):
+- [ ] [HTML5 & CSS3](/../../issues/1)
   - [ ] Slice and Dice pdf
   - [ ] HTML skeleton
   - [ ] CSS3 stylization
   
-## Ads REST Services
-- [ ] Public Services
+## [Ads REST Services](/../../milestones/REST%20Services):
+- [ ] [Public Services](/../../issues/2)
   - [ ] Get All Published Ads
   - [ ] Get All Categories
   - [ ] Get All Towns
   - [ ] User Login
   - [ ] Register User
-- [ ] User Services
+- [ ] [User Services](/../../issues/3)
   - [ ] Create New Ad
   - [ ] Get User Ads
   - [ ] Deactivate User Ad
@@ -25,14 +25,14 @@
   - [ ] Get User Profile
   - [ ]	Edit User Profile
   - [ ]	Authorization
-- [ ] *Bonus: Administration Services*
+- [ ] [*Bonus: Administration Services*](/../../issues/4)
   
-## Ads SPA Application
-- [ ] Public Screens
+## [Ads SPA Application](/../../milestones/SPA%20Application):
+- [ ] [Public Screens](/../../issues/5)
   - [ ] Home Screen
   - [ ] Login Screen
   - [ ] Register User Screen
-- [ ] User Screens
+- [ ] [User Screens](/../../issues/6)
   - [ ] User Home Screen
   - [ ] Publish New Ad Screen
   - [ ] List My Ads Screen
@@ -43,7 +43,7 @@
   - [ ] Change User Password
   - [ ] Logout
   - [ ]	Authorization Checks
-- [ ] *Bonus: Administrator Screens*
+- [ ] [*Bonus: Administrator Screens*](/../../issues/7)
   - [ ] *Admin Home Screen – #/admin/home*
   - [ ] *Admin Approve Ad*
   - [ ] *Admin Reject Ad*
