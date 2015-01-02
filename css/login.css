@@ -33,28 +33,11 @@ footer {
     padding: 5% 5% 5% 5%;
 }
 
-.menu {
-    margin: 0;
-    padding: 2%;
-    display: block;
-    float: left;
-    width: 10%;
-    font-size: 1.4rem;
-    box-shadow: 1px 1px 1px #888888;
-    border: solid 1px grey;
-    background-color: rgba(169,209,142,1);
-}
-
-.menu > p {
-    font-size: 0.7em;
-    text-align: center;
-}
-
 #login {
     padding: 2% 2% 2% 2%;
     display: block;
     border-radius: 8px;
-    box-shadow: 1px 1px 1px #888888;
+    box-shadow: 2px 2px 2px #888888;
     border: solid 1px #507e32;
     margin: 5% auto;
     width: 25%;
