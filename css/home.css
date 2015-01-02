@@ -194,3 +194,21 @@ footer {
     border: solid 1px #507e32;
     height: 50px;
 }
+
+#pager {
+    margin: auto;
+    width: 350px;
+}
+
+#pager > div {
+    background-color: rgba(169,209,142,1);
+    box-shadow: 2px 2px 2px #888888;
+    border: solid 1px #507e32;
+    display:inline-block;
+    position: relative;
+    padding: 2px 5px 2px 5px;
+}
+
+#pager > div:hover {
+    cursor: pointer;
+}
