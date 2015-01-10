@@ -11,7 +11,7 @@ app.controller('HomeController',
             adsService.getAds(
                 $scope.adsParams,
                 function success(data) {
-                    //console.log(data);
+                    console.log(data);
                     $scope.ads = data;
                 },
                 function error(err) {
@@ -19,6 +19,20 @@ app.controller('HomeController',
                 }
             );
         };
+
+        $scope.$on("categorySelectionChanged", function(event, selectedCategoryId) {
+            $scope.adsParams.categoryId = selectedCategoryId;
+            $scope.adsParams.startPage = 1;
+            $scope.reloadAds();
+        });
+
+
+        $scope.$on("townSelectionChanged", function(event, selectedTownId) {
+            $scope.adsParams.townId = selectedTownId;
+            $scope.adsParams.startPage = 1;
+            $scope.reloadAds();
+        });
+
 
         $scope.reloadAds();
     }
