@@ -13,7 +13,27 @@
         <input type="password" id="confirmPassword" ng-model="userData.confirmPassword" required="required"/>
     </p>
     <p>
-        <a ng-click="login(userData)" class="button">Login</a>
-        <a href="#/register" class="link">Register</a>
+        <label for="name">Name:</label>
+        <input type="text" id="name"/>
+    </p>
+    <p>
+        <label for="email">Email:</label>
+        <input type="email" id="email"/>
+    </p>
+    <p>
+        <label for="phone">Telephone:</label>
+        <input type="tel" id="phone"/>
+    </p>
+    <p>
+        <label for="town">Town:</label>
+        <select id="town" ng-model="userData.townId">
+            <option value="null">(None)</option>
+            <option ng-repeat="town in towns"
+                    value="{{town.id}}">{{town.name}}</option>
+        </select>
+    </p>
+    <p>
+        <a ng-click="register(userData)" class="button">Register</a>
+        <a href="#/login" class="link">Login</a>
     <p>
 </div>
