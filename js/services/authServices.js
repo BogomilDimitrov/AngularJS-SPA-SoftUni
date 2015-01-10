@@ -12,6 +12,7 @@ app.factory('authService',
                 $http(request).success(function(data) {
                     sessionStorage['currentUser'] = JSON.stringify(data);
                     success(data);
+                    //console.log(data);
                 }).error(error);
             },
 
@@ -20,7 +21,11 @@ app.factory('authService',
                     method: 'POST',
                     url: baseServiceUrl + '/api/user/register',
                     data: userData
-                }
+                };
+                $http(request).success(function(data) {
+                    sessionStorage['currentUser'] = JSON.stringify(data);
+                    success(data);
+                }).error(error)
             },
 
             logout: function() {
@@ -44,12 +49,12 @@ app.factory('authService',
 
             isNormalUser : function() {
                 var currentUser = this.getCurrentUser();
-                return (currentUser != undefined) && (!currentUser.isAdmin());
+                return (currentUser != undefined) && (!currentUser.isAdmin);
             },
 
             isAdmin : function() {
                 var currentUser = this.getCurrentUser();
-                return (currentUser != undefined) && (currentUser.isAdmin());
+                return (currentUser != undefined) && (currentUser.isAdmin);
             },
 
             getAuthHeaders : function() {
