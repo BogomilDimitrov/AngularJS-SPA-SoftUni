@@ -1,0 +1,20 @@
+<pagination total-items="towns.numItems" ng-model="adsParams.startPage"
+            items-per-page="adsParams.pageSize" ng-change="getTowns()"
+            max-size="12" boundary-links="true">
+</pagination>
+<div class="box">
+    <table class="list-towns">
+        <thead>
+        <tr><th>Towns</th><th>Action</th></tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="town in towns.towns">
+            <td>{{town.username}}</td>
+            <td>
+                <a ng-click="edit(town.id)">Edit</a>
+                <a href="#" ng-click="deleteTown(town)">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

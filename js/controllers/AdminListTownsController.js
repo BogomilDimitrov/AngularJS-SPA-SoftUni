@@ -1,34 +1,33 @@
 'use strict';
 
-app.controller('AdminListCategoriesController',
+app.controller('AdminListTownsController',
     function ($scope, pageSize, $location, townsService, categoriesService, notifyService, adminService) {
         $scope.adsParams = {
-            'SortBy' : 'Name',
             'startPage' : 1,
             'pageSize' : 10
         };
 
-        $scope.getCategories = function () {
-            adminService.getCategories(
+        $scope.getTowns = function () {
+            adminService.getTowns(
                 $scope.adsParams,
                 function success(data) {
-                    $scope.categories = data;
+                    $scope.towns = data;
                     console.log(data);
                 },
                 function error(err) {
-                    notifyService.showError('Error loading categories', err);
+                    notifyService.showError('Error loading users', err);
                 }
             )
         };
 
-        $scope.deleteCat = function(data) {
-            adminService.deleteCatById(data.id,
+        $scope.deleteTown = function(data) {
+            adminService.deleteTownById(data.id,
                 function success() {
-                    notifyService.showInfo("Successfully deleted category!");
-                    $location.path('/admin/categories/list');
+                    notifyService.showInfo("Successfully deleted town!");
+                    $location.path('/admin/towns/list');
                 },
                 function error(err) {
-                    notifyService.showError("Error while deleting category", err);
+                    notifyService.showError("Error while deleting town", err);
                 })
         };
 
@@ -51,6 +50,6 @@ app.controller('AdminListCategoriesController',
             $scope.getAds();
         });
 
-        $scope.getCategories();
+        $scope.getTowns();
     }
 );

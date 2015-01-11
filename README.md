@@ -57,7 +57,7 @@
   - [ ] *Admin Create Category – #/admin/categories/create*
   - [ ] *Admin Edit Category – #/admin/categories/edit/:id*
   - [x] *Admin Delete Category – #/admin/categories/delete/:id*
-  - [ ] *Admin List Towns – #/admin/towns/list*
+  - [x] *Admin List Towns – #/admin/towns/list*
   - [ ] *Admin Create Town – #/admin/towns/create*
   - [ ] *Admin Edit Town – #/admin/towns/edit/:id*
-  - [ ] *Admin Delete Town – #/admin/towns/delete/:id*
+  - [x] *Admin Delete Town – #/admin/towns/delete/:id*
