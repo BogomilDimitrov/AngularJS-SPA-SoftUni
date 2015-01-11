@@ -23,7 +23,6 @@ app.factory('authService',
                     data: userData
                 };
                 $http(request).success(function(data) {
-                    sessionStorage['currentUser'] = JSON.stringify(data);
                     success(data);
                 }).error(error)
             },
