@@ -7,12 +7,12 @@
   - [x] CSS3 stylization
   
 ## [Ads REST Services](/../../milestones/REST%20Services):
-- [ ] [Public Services](/../../issues/2)
+- [x] [Public Services](/../../issues/2)
   - [x] Get All Published Ads
   - [x] Get All Categories
   - [x] Get All Towns
-  - [ ] User Login
-  - [ ] Register User
+  - [x] User Login
+  - [x] Register User
 - [ ] [User Services](/../../issues/3)
   - [ ] Create New Ad
   - [ ] Get User Ads
@@ -28,12 +28,12 @@
 - [ ] [*Bonus: Administration Services*](/../../issues/4)
   
 ## [Ads SPA Application](/../../milestones/SPA%20Application):
-- [ ] [Public Screens](/../../issues/5)
+- [x] [Public Screens](/../../issues/5)
   - [x] Home Screen
-  - [ ] Login Screen
-  - [ ] Register User Screen
+  - [x] Login Screen
+  - [x] Register User Screen
 - [ ] [User Screens](/../../issues/6)
-  - [ ] User Home Screen
+  - [x] User Home Screen
   - [ ] Publish New Ad Screen
   - [ ] List My Ads Screen
   - [ ] Deactivate / Publish Again Ad
@@ -41,7 +41,7 @@
   - [ ]	Delete Ad
   - [ ] Edit User Profile
   - [ ] Change User Password
-  - [ ] Logout
+  - [x] Logout
   - [ ]	Authorization Checks
 - [ ] [*Bonus: Administrator Screens*](/../../issues/7)
   - [ ] *Admin Home Screen – #/admin/home*
