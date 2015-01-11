@@ -20,6 +20,17 @@ app.controller('UserGetMyAdsController',
             );
         };
 
+        $scope.deactivate = function(id) {
+            userService.deactivateAd(id,
+            function success() {
+                notifyService.showInfo("Add successfully deactivated!");
+                $location.path('/user/ads')
+            },
+            function error(err) {
+                notifyService.showError("Failed to deactivate ad", err);
+            })
+        };
+
         $scope.getAds();
     }
 );

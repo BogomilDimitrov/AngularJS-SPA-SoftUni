@@ -12,10 +12,22 @@
             <strong>Image:</strong>
             <img class="ad-image" ng-src="{{ad.imageDataUrl}}" />
         </div>
-        <div><p><strong>Text: </strong>{{ad.text}}<br/>
-            <strong>Name: </strong>{{ad.ownerName}}<br/>
-            <strong>Email: </strong>{{ad.ownerEmail}}<br/>
-            <strong>Phone: </strong>{{ad.ownerPhone}}</p></div>
+        <div>
+            <p>
+                <strong>Text: </strong>{{ad.text}}<br/>
+                <strong>Category: </strong>{{ad.categoryName}}<br/>
+                <strong>Town: </strong>{{ad.townName}}<br/>
+                <strong>Status: </strong>{{ad.status}}<br/>
+            </p>
+        </div>
+        <p>
+            <a ng-if="ad.status == 'Published' || ad.status == 'WaitingApproval'" ng-click="deactivate(ad.id)" class="button">Deactivate</a>
+        </p>
+        <p>
+            <a ng-if="ad.status == 'Inactive'" ng-click="edit(ad.id)" class="button">Edit</a>
+            <a ng-if="ad.status == 'Inactive'" ng-click="publishAgain(ad.id)" class="button">Publish Again</a>
+            <a ng-if="ad.status == 'Inactive'" ng-click="delete(ad.id)" class="button">Delete</a>
+        </p>
     </li>
 </ul>
 
