@@ -15,7 +15,7 @@
   - [x] Register User
 - [ ] [User Services](/../../issues/3)
   - [x] Create New Ad
-  - [ ] Get User Ads
+  - [X] Get User Ads
   - [ ] Deactivate User Ad
   - [ ] Publish Again User Ad
   - [ ] Get User Ad by Id
@@ -35,7 +35,7 @@
 - [ ] [User Screens](/../../issues/6)
   - [x] User Home Screen
   - [x] Publish New Ad Screen
-  - [ ] List My Ads Screen
+  - [x] List My Ads Screen
   - [ ] Deactivate / Publish Again Ad
   - [ ] Edit Ad
   - [ ]	Delete Ad

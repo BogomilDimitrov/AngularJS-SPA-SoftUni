@@ -22,11 +22,12 @@
         <li><a href="#/">Home</a></li>
         <li><a href="#/user/ads">My Ads</a></li>
         <li><a href="#/user/ads/publish">Publish New Add</a></li>
-        <!-- -->
         <li><a href="#/user/profile">Edit Profile</a></li>
         <li><a ng-click="logout()">Logout</a></li>
     </ul>
 </div>
+
+
 
 <!-- Navigation box for logged in admins -->
 <div ng-if="authService.isAdmin()" class="box">
