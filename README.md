@@ -42,7 +42,7 @@
   - [ ] Edit User Profile
   - [ ] Change User Password
   - [x] Logout
-  - [ ]	Authorization Checks
+  - [x]	Authorization Checks
 - [ ] [*Bonus: Administrator Screens*](/../../issues/7)
   - [ ] *Admin Home Screen – #/admin/home*
   - [ ] *Admin Approve Ad*
