@@ -1,16 +1,16 @@
 #AngularJS-SPA-SoftUni
 
 ## [Ads Web Design](/../../milestones/Web%20Design):
-- [ ] [HTML5 & CSS3](/../../issues/1)
-  - [ ] Slice and Dice pdf
-  - [ ] HTML skeleton
-  - [ ] CSS3 stylization
+- [x] [HTML5 & CSS3](/../../issues/1)
+  - [x] Slice and Dice pdf
+  - [x] HTML skeleton
+  - [x] CSS3 stylization
   
 ## [Ads REST Services](/../../milestones/REST%20Services):
 - [ ] [Public Services](/../../issues/2)
-  - [ ] Get All Published Ads
-  - [ ] Get All Categories
-  - [ ] Get All Towns
+  - [x] Get All Published Ads
+  - [x] Get All Categories
+  - [x] Get All Towns
   - [ ] User Login
   - [ ] Register User
 - [ ] [User Services](/../../issues/3)
@@ -29,7 +29,7 @@
   
 ## [Ads SPA Application](/../../milestones/SPA%20Application):
 - [ ] [Public Screens](/../../issues/5)
-  - [ ] Home Screen
+  - [x] Home Screen
   - [ ] Login Screen
   - [ ] Register User Screen
 - [ ] [User Screens](/../../issues/6)
