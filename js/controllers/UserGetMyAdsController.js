@@ -22,13 +22,35 @@ app.controller('UserGetMyAdsController',
 
         $scope.deactivate = function(id) {
             userService.deactivateAd(id,
-            function success() {
-                notifyService.showInfo("Add successfully deactivated!");
-                $location.path('/user/ads')
-            },
-            function error(err) {
-                notifyService.showError("Failed to deactivate ad", err);
-            })
+                function success() {
+                    notifyService.showInfo("Ad successfully deactivated!");
+                    $location.path('/user/ads')
+                },
+                function error(err) {
+                    notifyService.showError("Failed to deactivate ad", err);
+                })
+        };
+
+        $scope.publishAgain = function(id) {
+            userService.publishAgainAd(id,
+                function success() {
+                    notifyService.showInfo("Advertisement re-submitted for approval. Once approved, it will be published!");
+                    $location.path('/user/ads')
+                },
+                function error(err) {
+                    notifyService.showError("Failed to publish again ad", err);
+                })
+        };
+
+        $scope.deleteAd = function(id) {
+            userService.deleteAd(id,
+                function success() {
+                    notifyService.showInfo("Ad deleted");
+                    $location.path('/user/ads')
+                },
+                function error(err) {
+                    notifyService.showError("Failed to delete ad", err);
+                });
         };
 
         $scope.getAds();
