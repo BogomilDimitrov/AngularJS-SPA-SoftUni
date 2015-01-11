@@ -14,7 +14,7 @@
   - [x] User Login
   - [x] Register User
 - [ ] [User Services](/../../issues/3)
-  - [ ] Create New Ad
+  - [x] Create New Ad
   - [ ] Get User Ads
   - [ ] Deactivate User Ad
   - [ ] Publish Again User Ad
@@ -24,7 +24,7 @@
   - [ ] Change User Password
   - [ ] Get User Profile
   - [ ]	Edit User Profile
-  - [ ]	Authorization
+  - [x]	Authorization
 - [ ] [*Bonus: Administration Services*](/../../issues/4)
   
 ## [Ads SPA Application](/../../milestones/SPA%20Application):
@@ -34,7 +34,7 @@
   - [x] Register User Screen
 - [ ] [User Screens](/../../issues/6)
   - [x] User Home Screen
-  - [ ] Publish New Ad Screen
+  - [x] Publish New Ad Screen
   - [ ] List My Ads Screen
   - [ ] Deactivate / Publish Again Ad
   - [ ] Edit Ad

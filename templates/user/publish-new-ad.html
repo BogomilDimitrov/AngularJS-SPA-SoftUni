@@ -19,6 +19,14 @@
     </p>
 
     <p>
+        <label for="image">Image:</label>
+        <input type="file" id="image" onchange="angular.element(this).scope().fileSelected(this)" />
+        <div class="image-box">
+            <p>Image Preview</p>
+        </div>
+    </p>
+
+    <p>
         <label for="town">Town:</label>
         <select id="town" ng-model="adData.townId">
             <option value="null">(None)</option>
