@@ -19,7 +19,7 @@
 </header>
 
 <div id='app-content'>
-    <div class='col-md-2 sidebar'>
+    <div class='col-md-2 sidebar' ng-controller="LeftSidebarController">
         <div ng-include="'templates/partial/left-sidebar.html'"></div>
     </div>
 
@@ -55,6 +55,7 @@
 <script src="js/controllers/AppController.js"></script>
 <script src="js/controllers/HomeController.js"></script>
 <script src="js/controllers/RightSidebarController.js"></script>
+<script src="js/controllers/LeftSidebarController.js"></script>
 <script src="js/controllers/LoginController.js"></script>
 <script src="js/controllers/RegisterController.js"></script>
 <script src="js/controllers/UserPublishNewAdController.js"></script>

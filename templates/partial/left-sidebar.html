@@ -19,11 +19,11 @@
 <div ng-if="authService.isNormalUser()" class="box">
     <h2>Navigation</h2>
     <ul class="sidebar-menu">
-        <li><a href="#/">Home</a></li>
-        <li><a href="#/user/ads">My Ads</a></li>
-        <li><a href="#/user/ads/publish">Publish New Add</a></li>
-        <li><a href="#/user/profile">Edit Profile</a></li>
-        <li><a ng-click="logout()">Logout</a></li>
+        <li ng-class="{'selected' : navBtnId == null}" ng-click="navBtnClicked(null)"><a href="#/user/home">Home</a></li>
+        <li ng-class="{'selected' : navBtnId == 'My Ads'}" ng-click="navBtnClicked('My Ads')"><a href="#/user/ads">My Ads</a></li>
+        <li ng-class="{'selected' : navBtnId == 'Publish'}" ng-click="navBtnClicked('Publish')"><a href="#/user/ads/publish">Publish New Add</a></li>
+        <li ng-class="{'selected' : navBtnId == 'Edit'}" ng-click="navBtnClicked('Edit')"><a href="#/user/profile">Edit Profile</a></li>
+        <li ng-class="{'selected' : navBtnId == 'Logout'}" ng-click="navBtnClicked('Logout')"><a ng-click="logout()">Logout</a></li>
     </ul>
 </div>
 

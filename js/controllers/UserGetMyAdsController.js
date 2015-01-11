@@ -53,6 +53,12 @@ app.controller('UserGetMyAdsController',
                 });
         };
 
+        $scope.$on("navBtnSelectionChange", function(event, selectedId) {
+            $scope.navBtnId = selectedId;
+            $scope.adsParams.startPage = 1;
+            $scope.getAds();
+        });
+
         $scope.getAds();
     }
 );
