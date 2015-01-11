@@ -1,8 +1,7 @@
 'use strict';
 
 app.controller('AdminAdController',
-    function ($scope, $location, townsService, categoriesService,
-              userService, notifyService, adminService) {
+    function ($scope, $location, townsService, categoriesService, notifyService, adminService) {
         $scope.adsParams = {
             'startPage' : 1,
             'pageSize' : 1

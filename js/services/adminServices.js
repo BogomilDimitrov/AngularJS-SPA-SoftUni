@@ -48,6 +48,26 @@ app.factory('adminService',
                     data: data
                 };
                 $http(request).success(success).error(error);
+            },
+
+            getAllUsers: function (params, success, error) {
+                var request = {
+                    method: 'GET',
+                    url: baseServiceUrl + '/api/admin/users/',
+                    headers: authService.getAuthHeaders(),
+                    params: params
+                };
+                $http(request).success(success).error(error);
+            },
+
+            deleteUserById: function(params, success, error) {
+                var request = {
+                    method: 'DELETE',
+                    url: baseServiceUrl + '/api/admin/user/username=' + params.username,
+                    headers: authService.getAuthHeaders(),
+                    params: params
+                };
+                $http(request).success(success).error(error);
             }
         }
     }

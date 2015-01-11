@@ -57,6 +57,16 @@ app.config(function ($routeProvider) {
         controller: 'AdminEditAdController'
     });
 
+    $routeProvider.when('/admin/users/list', {
+        templateUrl: 'templates/admin/admin-list-users.html',
+        controller: 'AdminListUsersController'
+    });
+
+    $routeProvider.when('/admin/users/edit/', {
+        templateUrl: 'templates/admin/admin-edit-profile.html',
+        controller: 'AdminEditProfileController'
+    });
+
     $routeProvider.otherwise(
         { redirectTo: '/' }
     );

@@ -49,10 +49,10 @@
   - [x] *Admin Reject Ad*
   - [x] *Admin Edit Ad – #/admin/ads/edit/:id*
   - [x] *Admin Delete Ad – #/admin/ads/delete/:id*
-  - [ ] *Admin List Users – #/admin/users/list*
+  - [x] *Admin List Users – #/admin/users/list*
   - [ ] *Admin Edit User – #/admin/users/edit/:id*
   - [ ] *Admin Change User Password – #/admin/users/edit/:id*
-  - [ ] *Admin Delete User – #/admin/users/delete/:id*
+  - [x] *Admin Delete User – #/admin/users/delete/:id*
   - [ ] *Admin List Categories – #/admin/categories/list*
   - [ ] *Admin Create Category – #/admin/categories/create*
   - [ ] *Admin Edit Category – #/admin/categories/edit/:id*
