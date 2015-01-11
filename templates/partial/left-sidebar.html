@@ -18,7 +18,7 @@
 <!-- Navigation box for logged in normal users (not admins) -->
 <div ng-if="authService.isNormalUser()" class="box">
     <h2>Navigation</h2>
-    <ul class="sidebar-menu">
+    <ul>
         <li ng-class="{'selected' : navBtnId == null}" ng-click="navBtnClicked(null)"><a href="#/user/home">Home</a></li>
         <li ng-class="{'selected' : navBtnId == 'My Ads'}" ng-click="navBtnClicked('My Ads')"><a href="#/user/ads">My Ads</a></li>
         <li ng-class="{'selected' : navBtnId == 'Publish'}" ng-click="navBtnClicked('Publish')"><a href="#/user/ads/publish">Publish New Add</a></li>
@@ -27,6 +27,16 @@
     </ul>
 </div>
 
+<div ng-if="navBtnId == 'My Ads'" class="box">
+    <h2>Navigation</h2>
+    <ul class="sidebar-menu">
+        <li class="special" ng-class="{'selected' : status == null}" ng-click="statusCheck(null)">All</li>
+        <li class="special" ng-class="{'selected' : status == 'Published'}" ng-click="statusCheck('Published')">Published</li>
+        <li class="special" ng-class="{'selected' : status == 'WaitingApproval'}" ng-click="statusCheck('WaitingApproval')">Waiting Approval</li>
+        <li class="special" ng-class="{'selected' : status == 'Inactive'}" ng-click="statusCheck('Inactive')">Inactive</li>
+        <li class="special" ng-class="{'selected' : status == 'Rejected'}" ng-click="statusCheck('Rejected')">Rejected</li>
+    </ul>
+</div>
 
 
 <!-- Navigation box for logged in admins -->

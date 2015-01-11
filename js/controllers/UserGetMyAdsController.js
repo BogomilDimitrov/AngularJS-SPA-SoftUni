@@ -1,7 +1,7 @@
 'use strict';
 
 app.controller('UserGetMyAdsController',
-    function ($scope, $location, userService, notifyService, pageSize) {
+    function ($scope, $location, $rootScope, userService, notifyService, pageSize) {
         $scope.adsParams = {
             'startPage' : 1,
             'pageSize' : pageSize
@@ -24,7 +24,7 @@ app.controller('UserGetMyAdsController',
             userService.deactivateAd(id,
                 function success() {
                     notifyService.showInfo("Ad successfully deactivated!");
-                    $location.path('/user/ads')
+                    $scope.getAds();
                 },
                 function error(err) {
                     notifyService.showError("Failed to deactivate ad", err);
@@ -35,7 +35,7 @@ app.controller('UserGetMyAdsController',
             userService.publishAgainAd(id,
                 function success() {
                     notifyService.showInfo("Advertisement re-submitted for approval. Once approved, it will be published!");
-                    $location.path('/user/ads')
+                    $scope.getAds();
                 },
                 function error(err) {
                     notifyService.showError("Failed to publish again ad", err);
@@ -46,15 +46,34 @@ app.controller('UserGetMyAdsController',
             userService.deleteAd(id,
                 function success() {
                     notifyService.showInfo("Ad deleted");
-                    $location.path('/user/ads')
+                    $scope.getAds();
                 },
                 function error(err) {
                     notifyService.showError("Failed to delete ad", err);
                 });
         };
 
+        $scope.editAd = function(id) {
+            userService.getUserAdById(id,
+                function success(data) {
+                    sessionStorage['editAd'] = JSON.stringify(data);
+                    $location.path('/user/ads/edit');
+
+                },
+                function error(err) {
+                    notifyService.showError("Failed to open Edit page", err);
+                }
+            )
+        };
+
         $scope.$on("navBtnSelectionChange", function(event, selectedId) {
             $scope.navBtnId = selectedId;
+            $scope.adsParams.startPage = 1;
+            $scope.getAds();
+        });
+
+        $scope.$on("statusFilterSelectionChanged", function(event, selectedStatus) {
+            $scope.adsParams.status = selectedStatus;
             $scope.adsParams.startPage = 1;
             $scope.getAds();
         });

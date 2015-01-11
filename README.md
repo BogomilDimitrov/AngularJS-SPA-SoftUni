@@ -18,8 +18,8 @@
   - [x] Get User Ads
   - [x] Deactivate User Ad
   - [X] Publish Again User Ad
-  - [ ] Get User Ad by Id
-  - [ ]	Edit User Ad
+  - [X] Get User Ad by Id
+  - [X]	Edit User Ad
   - [X] Delete Ad by Id
   - [ ] Change User Password
   - [ ] Get User Profile
@@ -37,7 +37,7 @@
   - [x] Publish New Ad Screen
   - [x] List My Ads Screen
   - [x] Deactivate / Publish Again Ad
-  - [ ] Edit Ad
+  - [X] Edit Ad
   - [X]	Delete Ad
   - [ ] Edit User Profile
   - [ ] Change User Password

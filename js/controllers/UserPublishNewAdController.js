@@ -11,7 +11,7 @@ app.controller('UserPublishNewAdController',
             userService.createNewAd(adData,
                 function success() {
                     notifyService.showInfo("Advertisement submitted for approval. Once approved, it will be published");
-                    $location.path("/user/ads");
+                    $location.path("/user/home");
                 },
                 function error(err) {
                     notifyService.showError("Failed to publish ad", err);

@@ -7,5 +7,10 @@ app.controller('LeftSidebarController',
             $scope.navBtnId = btnId;
             $rootScope.$broadcast("navBtnSelectionChange", btnId);
         };
+
+        $scope.statusCheck = function(status) {
+            $scope.status = status;
+            $rootScope.$broadcast("statusFilterSelectionChanged", status);
+        };
     }
 );

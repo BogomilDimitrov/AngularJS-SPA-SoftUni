@@ -10,7 +10,7 @@ app.factory('userService',
                     headers: authService.getAuthHeaders(),
                     data: adData
                 };
-                console.log(authService.getAuthHeaders());
+                //console.log(authService.getAuthHeaders());
                 $http(request).success(success).error(error);
             },
 
@@ -20,6 +20,15 @@ app.factory('userService',
                     url: baseServiceUrl + '/api/user/ads',
                     headers: authService.getAuthHeaders(),
                     params: params
+                };
+                $http(request).success(success).error(error);
+            },
+
+            getUserAdById: function (id, success, error) {
+                var request = {
+                    method: 'GET',
+                    url: baseServiceUrl + '/api/user/ads/' + id,
+                    headers: authService.getAuthHeaders()
                 };
                 $http(request).success(success).error(error);
             },
@@ -38,6 +47,16 @@ app.factory('userService',
                     method: 'PUT',
                     url: baseServiceUrl + '/api/user/ads/publishagain/' + id,
                     headers: authService.getAuthHeaders()
+                };
+                $http(request).success(success).error(error);
+            },
+
+            editAd: function(id, data, success, error) {
+                var request = {
+                    method: 'PUT',
+                    url:  baseServiceUrl + '/api/user/ads/' + id,
+                    headers: authService.getAuthHeaders(),
+                    data: data
                 };
                 $http(request).success(success).error(error);
             },
