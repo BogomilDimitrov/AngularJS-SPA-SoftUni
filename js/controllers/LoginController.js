@@ -15,6 +15,6 @@ app.controller('LoginController',
             function error(err) {
                 notifyService.showError("Failed to login", err);
             });
-        }
+        };
     }
 );

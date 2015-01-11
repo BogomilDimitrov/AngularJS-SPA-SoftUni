@@ -4,22 +4,17 @@
 app.controller('AdminEditProfileController',
     function ($scope, $location, townsService, adminService, notifyService) {
         $scope.towns = townsService.getTowns();
-        $scope.getUserData = function() {
-            adminService.getAllUsers(null,
-                function success(data) {
-                    $scope.userData = data;
-                },
-                function error(err) {
-                    notifyService.showError("An error occurred while downloading user data", err);
-                }
-            )
-        };
+
+        $scope.userData = JSON.parse(sessionStorage['foundUser']);
+        delete sessionStorage['foundUser'];
 
         $scope.update = function(data) {
-            userService.updateUserProfile(data,
+            console.log(data);
+            adminService.updateUserProfile(data,
                 function success() {
                     notifyService.showInfo("Successfully updated profile!");
-                    $location.path('/user/profile/');
+                    $location.path('/admin/users/list');
+
                 },
                 function error(err) {
                     notifyService.showError("Error while updating profile", err);
@@ -27,17 +22,20 @@ app.controller('AdminEditProfileController',
         };
 
         $scope.changePass = function(data) {
-            userService.changePassword(data,
+            console.log(data);
+            var params = {
+                Username: data.userName,
+                NewPassword: data.newpassword,
+                ConfirmPassword: data.confirmPassword
+            };
+            adminService.changeUserPassword(params,
                 function success() {
                     notifyService.showInfo("Successfully changed password!");
-                    $location.path('/user/profile/');
+                    $location.path('/admin/users/list/');
                 },
                 function error(err) {
                     notifyService.showError("Error while changing password", err);
                 })
         };
-
-
-        $scope.getUserData();
     }
 );

@@ -14,7 +14,7 @@
             <td>{{user.email}}</td>
             <td>{{user.phoneNumber}}</td>
             <td>
-                <a href="#/admin/users/edit">Edit</a>
+                <a ng-click="edit(user.id)">Edit</a>
                 <a href="#" ng-click="deleteUser(user)">Delete</a>
             </td>
         </tr>

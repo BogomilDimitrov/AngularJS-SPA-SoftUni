@@ -60,12 +60,41 @@ app.factory('adminService',
                 $http(request).success(success).error(error);
             },
 
+            getUserById: function (id, success, error) {
+                var request = {
+                    method: 'GET',
+                    url: baseServiceUrl + '/api/admin/users/' + id,
+                    headers: authService.getAuthHeaders()
+                };
+                $http(request).success(success).error(error);
+            },
+
             deleteUserById: function(params, success, error) {
                 var request = {
                     method: 'DELETE',
                     url: baseServiceUrl + '/api/admin/user/username=' + params.username,
                     headers: authService.getAuthHeaders(),
                     params: params
+                };
+                $http(request).success(success).error(error);
+            },
+
+            updateUserProfile: function(data, success, error) {
+                var request = {
+                    method: 'PUT',
+                    url: baseServiceUrl + '/api/admin/user/' + data.userName,
+                    headers: authService.getAuthHeaders(),
+                    data: data
+                };
+                $http(request).success(success).error(error);
+            },
+
+            changeUserPassword: function(data, success, error) {
+                var request = {
+                    method: 'PUT',
+                    url: baseServiceUrl + '/api/admin/SetPassword',
+                    headers: authService.getAuthHeaders(),
+                    data: data
                 };
                 $http(request).success(success).error(error);
             }

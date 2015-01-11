@@ -50,8 +50,8 @@
   - [x] *Admin Edit Ad – #/admin/ads/edit/:id*
   - [x] *Admin Delete Ad – #/admin/ads/delete/:id*
   - [x] *Admin List Users – #/admin/users/list*
-  - [ ] *Admin Edit User – #/admin/users/edit/:id*
-  - [ ] *Admin Change User Password – #/admin/users/edit/:id*
+  - [x] *Admin Edit User – #/admin/users/edit/:id*
+  - [x] *Admin Change User Password – #/admin/users/edit/:id*
   - [x] *Admin Delete User – #/admin/users/delete/:id*
   - [ ] *Admin List Categories – #/admin/categories/list*
   - [ ] *Admin Create Category – #/admin/categories/create*

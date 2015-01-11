@@ -23,16 +23,16 @@
         </select>
     </p>
     <p>
+        <label for="isAdmin">is Administrator?</label>
+        <input type="checkbox" value="true" id="isAdmin" ng-checked="userData.isAdmin"/>
+    </p>
+    <p>
         <a ng-click="update(userData)" class="button">Update</a>
         <a href="#/users/home/" class="button">Cancel</a>
     <p>
 </div>
 <div class="box">
     <h2>Change Password</h2>
-    <p>
-        <label for="oldPassword">Old password:</label>
-        <input type="password" id="oldPassword" ng-model="userData.oldpassword" required="required"/>
-    </p>
     <p>
         <label for="newPassword">New password:</label>
         <input type="password" id="newPassword" ng-model="userData.newpassword" required="required"/>

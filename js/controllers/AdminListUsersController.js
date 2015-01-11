@@ -13,7 +13,7 @@ app.controller('AdminListUsersController',
                 $scope.adsParams,
                 function success(data) {
                     $scope.users = data;
-                    console.log(data);
+                    //console.log(data);
                 },
                 function error(err) {
                     notifyService.showError('Error loading users', err);
@@ -33,6 +33,20 @@ app.controller('AdminListUsersController',
                 function error(err) {
                     notifyService.showError("Error while deleting user", err);
                 })
+        };
+
+        $scope.edit = function (id) {
+            var foundUser;
+            adminService.getUserById(
+                id,
+                function success(data) {
+                    sessionStorage['foundUser'] = JSON.stringify(data);
+                    $location.path('admin/users/edit');
+                },
+                function error(err) {
+                    notifyService.showError("Error loading users", err);
+                }
+            )
         };
 
         $scope.$on("categorySelectionChanged", function(event, selectedCategoryId) {

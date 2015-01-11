@@ -1,4 +1,4 @@
-<div class="box" ng-if="navBtnId == 'Ads'">
+<div class="box" ng-if="location.path() == '/admin/home' || location.path().indexOf('/user/') != -1">
     <h2>Categories</h2>
     <ul class="sidebar-menu">
         <li class="special"
@@ -12,7 +12,7 @@
     </ul>
 </div>
 
-<div class="box" ng-if="navBtnId == 'Ads'">
+<div class="box" ng-if="location.path() == '/admin/home' || location.path().indexOf('/user/') != -1">
     <h2>Towns</h2>
     <ul class="sidebar-menu">
         <li class="special"
