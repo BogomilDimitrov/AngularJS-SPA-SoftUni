@@ -44,11 +44,11 @@
   - [x] Logout
   - [x]	Authorization Checks
 - [ ] [*Bonus: Administrator Screens*](/../../issues/7)
-  - [ ] *Admin Home Screen – #/admin/home*
-  - [ ] *Admin Approve Ad*
-  - [ ] *Admin Reject Ad*
-  - [ ] *Admin Edit Ad – #/admin/ads/edit/:id*
-  - [ ] *Admin Delete Ad – #/admin/ads/delete/:id*
+  - [x] *Admin Home Screen – #/admin/home*
+  - [x] *Admin Approve Ad*
+  - [x] *Admin Reject Ad*
+  - [x] *Admin Edit Ad – #/admin/ads/edit/:id*
+  - [x] *Admin Delete Ad – #/admin/ads/delete/:id*
   - [ ] *Admin List Users – #/admin/users/list*
   - [ ] *Admin Edit User – #/admin/users/edit/:id*
   - [ ] *Admin Change User Password – #/admin/users/edit/:id*

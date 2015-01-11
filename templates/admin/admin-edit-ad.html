@@ -1,0 +1,66 @@
+<div class="box">
+    <h2>Edit My Ad</h2>
+    <p>
+        <label for="title">Title:</label>
+        <input type="text" id="title" ng-model="ad.title" value="{{ad.title}}" required />
+    </p>
+
+    <p>
+        <label for="text">Text:</label>
+        <textarea id="text" ng-model="ad.text">{{ad.text}}</textarea>
+    </p>
+
+    <p>
+        <label for="category">Category:</label>
+        <select id="category" ng-model="ad.categoryId">
+            <option value="null">(None)</option>
+            <option ng-repeat="c in categories" value="{{c.id}}" ng-if="c.id != ad.categoryId">{{c.name}}</option>
+            <option ng-repeat="c in categories" value="{{c.id}}" ng-if="ad.categoryId == c.id" selected>{{c.name}}</option>
+        </select>
+    </p>
+
+    <p>
+        <label for="image">Image:</label>
+        <input type="file" id="image" onchange="angular.element(this).scope().fileSelected(this)"/>
+    <div class="image-box">
+        <img class="ad-image" ng-src="{{ad.imageDataUrl}}" />
+        <p ng-if="ad.imageDataUrl == null">Image Preview</p>
+    </div>
+    </p>
+    <p>
+        <a ng-click="changeImage()" class="button">Change Image</a>
+        <a ng-click="deleteImage()" class="button">Delete Image</a>
+    </p>
+
+    <p>
+        <label for="town">Town:</label>
+        <select id="town" ng-model="ad.townId">
+            <option value="null">(None)</option>
+            <option ng-repeat="town in towns"
+                    value="{{town.id}}" ng-if="ad.townId != town.id">{{town.name}}</option>
+            <option ng-repeat="town in towns"
+                    value="{{town.id}}" ng-if="ad.townId == town.id" selected>{{town.name}}</option>
+        </select>
+    </p>
+
+    <p>
+        <label for="status">Status:</label>
+        <select id="status" ng-model="ad.status">
+            <option value="WaitingApproval" ng-if="ad.status != 'WaitingApproval'" >Waiting Approval</option>
+            <option value="Published" ng-if="ad.status != 'Published'" >Published</option>
+            <option value="Inactive" ng-if="ad.status != 'Inactive'" >Inactive</option>
+            <option value="Rejected" ng-if="ad.status != 'Rejected'" >Rejected</option>
+
+
+            <option value="Inactive" ng-if="ad.status == 'Inactive'" selected>Inactive</option>
+            <option value="Rejected" ng-if="ad.status == 'Rejected'" selected>Rejected</option>
+            <option value="Published" ng-if="ad.status == 'Published'" selected>Published</option>
+            <option value="WaitingApproval" ng-if="ad.status == 'WaitingApproval'" selected>Waiting Approval</option>
+        </select>
+    </p>
+
+    <p>
+        <a ng-click="editAd(ad)" class="button">Edit</a>
+        <a href="#/user/ads" class="button">Cancel</a>
+    <p>
+</div>

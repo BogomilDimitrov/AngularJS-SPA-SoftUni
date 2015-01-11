@@ -1,0 +1,58 @@
+<pagination total-items="ads.numItems" ng-model="adsParams.startPage"
+            items-per-page="adsParams.pageSize" ng-change="getAds()"
+            max-size="9" boundary-links="true">
+</pagination>
+
+<div class="box" ng-repeat="ad in ads.ads">
+    <h2>{{ad.title}}</h2>
+    <p>
+        <label for="title">Title:</label>
+        <input type="text" id="title" ng-model="ad.title" value="{{ad.title}}" disabled />
+    </p>
+
+    <p>
+        <label for="image">Image:</label>
+        <img class="ad-image" id="image" ng-src="{{ad.imageDataUrl}}" />
+    </p>
+
+    <p>
+        <label for="text">Text:</label>
+        <textarea type="text" id="text" ng-model="ad.text" disabled></textarea>
+    </p>
+
+    <p>
+        <label for="username">Username:</label>
+        <input type="text" id="username" ng-model="ad.ownerUsername" disabled>
+    </p>
+    <p>
+        <label for="name">Name:</label>
+        <input type="text" id="name" ng-model="ad.ownerName" disabled>
+    </p>
+    <p>
+        <label for="email">Email:</label>
+        <input type="text" id="email" ng-model="ad.ownerEmail" disabled>
+    </p>
+    <p>
+        <label for="phone">Tel:</label>
+        <input type="text" id="phone" ng-model="ad.ownerPhone" disabled>
+    </p>
+    <p>
+        <label for="category">Category:</label>
+        <input type="text" id="category" ng-model="ad.categoryName" disabled>
+    </p>
+    <p>
+        <label for="town">Town:</label>
+        <input type="text" id="town" ng-model="ad.townName" disabled>
+    </p>
+    <p>
+        <label for="status">Status:</label>
+        <input type="text" id="status" ng-model="ad.status" disabled>
+    </p>
+    <hr/>
+    <p style="display: inline">
+        <a ng-click="approve(ad.id)" class="button">Approve</a>
+        <a ng-click="reject(ad.id)" class="button">Reject</a>
+        <a ng-click="editAd(ad)" class="button">Edit</a>
+        <a ng-click="deleteAd(ad.id)" class="button">Delete</a>
+    <p>
+</div>

@@ -41,5 +41,22 @@
 
 <!-- Navigation box for logged in admins -->
 <div ng-if="authService.isAdmin()" class="box">
-    <!-- TODO: implement the “Admin” navigation sidebar -->
+    <h2>Navigation</h2>
+    <ul>
+        <li ng-class="{'selected' : navBtnId == 'Ads'}" ng-click="navBtnClicked('Ads')"><a href="#/admin/home">Ads</a></li>
+        <li ng-class="{'selected' : navBtnId == 'Users'}" ng-click="navBtnClicked('Users')"><a href="#/admin/users">Users</a></li>
+        <li ng-class="{'selected' : navBtnId == 'Categories'}" ng-click="navBtnClicked('Categories')"><a href="#/admin/categories">Categories</a></li>
+        <li ng-class="{'selected' : navBtnId == 'Towns'}" ng-click="navBtnClicked('Towns')"><a href="#/admin/towns">Towns</a></li>
+    </ul>
+</div>
+
+<div ng-if="authService.isAdmin()" class="box">
+    <h2>Navigation</h2>
+    <ul class="sidebar-menu">
+        <li class="special" ng-class="{'selected' : status == null}" ng-click="statusCheck(null)">All</li>
+        <li class="special" ng-class="{'selected' : status == 'Published'}" ng-click="statusCheck('Published')">Published</li>
+        <li class="special" ng-class="{'selected' : status == 'WaitingApproval'}" ng-click="statusCheck('WaitingApproval')">Waiting Approval</li>
+        <li class="special" ng-class="{'selected' : status == 'Inactive'}" ng-click="statusCheck('Inactive')">Inactive</li>
+        <li class="special" ng-class="{'selected' : status == 'Rejected'}" ng-click="statusCheck('Rejected')">Rejected</li>
+    </ul>
 </div>
