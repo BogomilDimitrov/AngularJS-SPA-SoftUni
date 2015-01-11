@@ -13,7 +13,7 @@
   - [x] Get All Towns
   - [x] User Login
   - [x] Register User
-- [ ] [User Services](/../../issues/3)
+- [x] [User Services](/../../issues/3)
   - [x] Create New Ad
   - [x] Get User Ads
   - [x] Deactivate User Ad
@@ -21,9 +21,9 @@
   - [X] Get User Ad by Id
   - [X]	Edit User Ad
   - [X] Delete Ad by Id
-  - [ ] Change User Password
-  - [ ] Get User Profile
-  - [ ]	Edit User Profile
+  - [x] Change User Password
+  - [x] Get User Profile
+  - [x]	Edit User Profile
   - [x]	Authorization
 - [ ] [*Bonus: Administration Services*](/../../issues/4)
   
@@ -32,15 +32,15 @@
   - [x] Home Screen
   - [x] Login Screen
   - [x] Register User Screen
-- [ ] [User Screens](/../../issues/6)
+- [x] [User Screens](/../../issues/6)
   - [x] User Home Screen
   - [x] Publish New Ad Screen
   - [x] List My Ads Screen
   - [x] Deactivate / Publish Again Ad
-  - [X] Edit Ad
-  - [X]	Delete Ad
-  - [ ] Edit User Profile
-  - [ ] Change User Password
+  - [x] Edit Ad
+  - [x]	Delete Ad
+  - [x] Edit User Profile
+  - [x] Change User Password
   - [x] Logout
   - [x]	Authorization Checks
 - [ ] [*Bonus: Administrator Screens*](/../../issues/7)
