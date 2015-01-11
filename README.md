@@ -53,10 +53,10 @@
   - [x] *Admin Edit User – #/admin/users/edit/:id*
   - [x] *Admin Change User Password – #/admin/users/edit/:id*
   - [x] *Admin Delete User – #/admin/users/delete/:id*
-  - [ ] *Admin List Categories – #/admin/categories/list*
+  - [x] *Admin List Categories – #/admin/categories/list*
   - [ ] *Admin Create Category – #/admin/categories/create*
   - [ ] *Admin Edit Category – #/admin/categories/edit/:id*
-  - [ ] *Admin Delete Category – #/admin/categories/delete/:id*
+  - [x] *Admin Delete Category – #/admin/categories/delete/:id*
   - [ ] *Admin List Towns – #/admin/towns/list*
   - [ ] *Admin Create Town – #/admin/towns/create*
   - [ ] *Admin Edit Town – #/admin/towns/edit/:id*

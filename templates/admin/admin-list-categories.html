@@ -1,0 +1,20 @@
+<pagination total-items="categories.numItems" ng-model="adsParams.startPage"
+            items-per-page="adsParams.pageSize" ng-change="getCategories()"
+            max-size="12" boundary-links="true">
+</pagination>
+<div class="box">
+    <table class="list-categories">
+        <thead>
+        <tr><th>Category</th><th>Action</th></tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="cat in categories.categories">
+            <td>{{cat.username}}</td>
+            <td>
+                <a ng-click="edit(cat.id)">Edit</a>
+                <a href="#" ng-click="deleteCat(cat)">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

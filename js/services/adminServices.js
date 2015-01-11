@@ -97,6 +97,25 @@ app.factory('adminService',
                     data: data
                 };
                 $http(request).success(success).error(error);
+            },
+
+            getCategories: function(params, success, error) {
+                var request = {
+                    method: 'GET',
+                    url: baseServiceUrl + '/api/admin/categories',
+                    headers: authService.getAuthHeaders(),
+                    params: params
+                };
+                $http(request).success(success).error(error);
+            },
+
+            deleteCatById: function(id, success, error) {
+                var request = {
+                    method: 'DELETE',
+                    url: baseServiceUrl + '/api/admin/categories/' + id,
+                    headers: authService.getAuthHeaders()
+                };
+                $http(request).success(success).error(error);
             }
         }
     }
